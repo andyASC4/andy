@@ -1,0 +1,17 @@
+html {
+    background-image: url("http://collectwall.com/wp-content/uploads/2016/06/Pokemon-GO-Pokeball-Wallpaper.jpg");
+    background-position: center;
+    text-align: center;
+}
+
+.Header {
+    font-size: 250%;
+}
+
+p{
+    font-size: 150%;
+}
+
+img {
+    margin-bottom: 10px;
+}
