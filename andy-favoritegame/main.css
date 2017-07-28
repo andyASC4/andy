@@ -1,0 +1,28 @@
+html {
+    background-image: url("http://i.imgur.com/EK67U0S.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+    color: burlywood;
+    font-family: "Brush Script MT", cursive;
+    font-size: 70px;
+    text-shadow: 2px 2px black;
+}
+
+h2 {
+    color: red;
+    text-shadow: 2px 2px black;
+}
+
+.Header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+p {
+    color: white;
+    font-family: cursive;
+    font-size: 20px;
+}
