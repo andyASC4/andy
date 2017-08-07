@@ -1,0 +1,53 @@
+/*!
+ * Start Bootstrap - 2 Col Portfolio (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    background-image: url("http://i.imgur.com/2LxEEcr.png");
+    background-position: center;
+    background-size: 2000px;
+    color: lightgreen;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    text-shadow: 2px 2px black;
+}
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+#user{
+    color: black;
+    padding: 10px;
+    height: 150px;
+    width: 500px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    border-style: solid;
+    border-color: lightblue;
+    border-width: 5px;
+}
+
+#yoda{
+    color: black;
+    padding: 10px;
+    height: 150px;
+    width: 500px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    border-style: solid;
+    border-color: lightblue;
+    border-width: 5px;
+}
+
+img{
+    height: 45px;
+    width: 45px;
+}

@@ -1,16 +1,40 @@
-html file <html>
+<html>
     <head>
+      <center><img src="http://img3.wikia.nocookie.net/__cb20121204012156/ninokuni/images/3/3c/Nintendo_logo.png"></center>
+<!--nav bar-->
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">Games</a></li>
+  <li><a href="#contact">Consoles</a></li>
+  <li style="float:right"><a class="active" href="#about">About</a></li>
+</ul>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>myOAuth</title>
+
+    <!--Reference platform.js library here-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <!--Reference Client ID in meta tag here-->
+    <meta name="google-signin-client_id" content="718897129555-f99nm1bslbjpigfjc7lmsqkfks34c0ud.apps.googleusercontent.com">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="randomGif.js"></script>
+
+      <script src="app.js"></script>
       <link rel="stylesheet" href="main.css">
        </head>
   
    <body>
-        
+    <div class="signs">
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+      <a href="#" class="signOut" onclick="onSignOut();">Sign out</a>
+    </div>
+    
      <div>
-       <img id="randomimg" src="http://i0.kym-cdn.com/photos/images/original/001/233/544/d15.png" width="1300" height="800">
+       <img id="randomimg" src="http://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/wii_24/SI_Wii_SuperMarioGalaxy2.png" width="1300" height="800">
        <div>
+         <center><p>Above are some featured games from the popular Mario and Zelda series. These games are available on multiple platforms such as the Wii U and Nintendo 3ds.</p></center>
        </body>
   
   </html>
