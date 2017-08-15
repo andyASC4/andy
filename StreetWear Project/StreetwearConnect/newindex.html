@@ -1,0 +1,179 @@
+<html lang="en">
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+        <!-- Java Script File -->
+        <script src='app.js'></script> 
+        <!-- Mapbox API --> 
+        <script src='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet'/>
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet'/>
+        <!-- Bootstrap --> 
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <!-- CSS File --> 
+        <link rel='stylesheet' href='newmain.css'>
+        <!-- CSS Hover (Button Animations) -->
+        <link href="hover.css" rel="stylesheet" media="all"> <!-- CSS Hover animinations -->
+        <!-- Idefk what this is -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title> Streetwear Connect </title>
+   
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+    </head>
+<body>
+    <style>
+        #fly {
+        display: block;
+        position: relative;
+        margin: 0px auto;
+        width: 50%;
+        height: 40px;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        font-size: 12px;
+        text-align: center;
+        color: #fff;
+        background: #ee8a65; 
+        }
+    </style>
+        
+        <div id='map'></div>
+        <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYWNoYXNlYXNjNCIsImEiOiJjajY5c241N2cwcXI1MzJxcng4cW01azZtIn0.iebahkPczfVQ0HFjpJgUZg';
+        var map = new mapboxgl.Map({
+            style: 'mapbox://styles/mapbox/streets-v9',
+            center: [0, 0],
+            zoom: 15,
+            pitch: 45,
+            bearing: -17.6,
+            container: 'map'
+        });
+        // the 'building' layer in the mapbox-streets vector source contains building-height
+        // data from OpenStreetMap.
+        map.on('load', function() {
+            map.addLayer({
+                'id': '3d-buildings',
+                'source': 'composite',
+                'source-layer': 'building',
+                'filter': ['==', 'extrude', 'true'],
+                'type': 'fill-extrusion',
+                'minzoom': 15,
+                'paint': {
+                    'fill-extrusion-color': '#aaa',
+                    'fill-extrusion-height': {
+                        'type': 'identity',
+                        'property': 'height'
+                    },
+                    'fill-extrusion-base': {
+                        'type': 'identity',
+                       'property': 'min_height'
+                    },
+                    'fill-extrusion-opacity': .6
+                }
+            });
+        });
+</script>
+    </head>
+    <body>
+        <div id='map' style='width: 400px; height: 300px;'></div>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoiYWNoYXNlYXNjNCIsImEiOiJjajY5c241N2cwcXI1MzJxcng4cW01azZtIn0.iebahkPczfVQ0HFjpJgUZg';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/light-v9'
+            });
+        </script>
+           <img scr: url("https://d30y9cdsu7xlg0.cloudfront.net/png/23041-200.png")>
+       <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                        Stores
+                 <div class="dropdown">
+                    <button id="Shop_Supreme" onclick="supremeFunction()" class="dropbtn hvr-forward hvr-overline-from-left">Shop Supreme</button>
+                    <div id="supremeDropdown" class="dropdown-content">
+                        <a href="#" onclick="supremeNY()">New York</a>
+                        <a href="#" onclick="supremeCali()">California</a>
+                        <a href="#"onclick="supremeLondon()">London</a>
+                        <a href="#" onclick="supremeParis()">Paris</a>
+                        <a href="#" onclick="supremeOsaka()">Osaka</a>
+                     </div>                                
+                    <div class="dropdown">
+                    <button onclick="ovoFunction()" class="dropbtn hvr-forward hvr-overline-from-left">Shop OVO</button>
+                    <div id="ovoDropdown" class="dropdown-content">
+                        <a href="#"onclick="ovoToronto()">Toronto</a>
+                        <a href="#"onclick="ovoCali()">California</a>
+                        <a href="#"onclick="ovoNY()">New York</a>
+                     </div>
+                    <div class="dropdown">
+                    <button onclick="bapeFunction()" class="dropbtn hvr-forward hvr-overline-from-left">Shop Bape</button>
+                    <div id="bapeDropdown" class="dropdown-content">
+                        <a href="#">New York</a>
+                     </div>
+                    <div class="dropdown">
+                    <button onclick="stussyFunction()" class="dropbtn hvr-forward hvr-overline-from-left">Shop Stussy</button>
+                    <div id="stussyDropdown" class="dropdown-content">
+                        <a href="#">California</a>
+                        <a href="#">New York</a>
+                        <a href="#">Ontario</a>
+                        <a href="#">British Columbbia</a>
+                        <a href="#">South Korea</a>
+                        <a href="#">Italy</a>
+                        <a href="#">Japan</a>
+                    </div>
+                    <div class="dropdown">
+                    <button onclick="kithFunction()" class="dropbtn hvr-forward hvr-overline-from-left">Shop Kith</button>
+                    <div id="kithDropdown" class="dropdown-content">
+                        <a href="#">Locations</a>
+                    </div>
+                    <a href="#">Contact</a>
+                    <a href="faqindex.html">FAQ</a>
+                </div>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <a href="url">Create an account</a>
+        <div id="login">
+             <a href="#">
+                <button onclick="login" class="btn btn-default hvr-sink">Login</button>
+                <button onclick="signout" class="btn btn-default hvr-sink">Sign Out</button>
+                <button onclick="blog" class="btn btn-default hvr-sink">Blog Page</button>
+                <button onlick="account" class="btn btn-default hvr-sink">Create Account</button>
+            </a>
+        </div>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Streetwear Connect</h1>
+                        <p>Discover store locations through the click of a button! </code></p>
+                        <a href="#menu-toggle" class="btn btn-default hvr-grow-shadow" id="menu-toggle">Toggle Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+        
+    </body>
+</html>
